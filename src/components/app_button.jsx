@@ -1,35 +1,33 @@
 import React from 'react';
-import { useDispatch, useSelector} from 'react-redux';
-import { decrement, increment } from '../store/counterSlice';
-import { incrementByAmount, setInputValue} from '../store/counterSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment, incrementByAmount } from '../store/counterSlice';
+import '../index.scss'
 
-export function ButtonComponentIncrement() {
+export const ButtonComponentIncrement = () => {
     const dispatch = useDispatch();
     return (
-         <div>
-            <button
-                aria-label="Increment value"
-                onClick={() => dispatch(increment())}>
-                  Increment
-                </button>
-        </div>
+        <button
+            className="button button-increment"
+            aria-label="Increment value"
+            onClick={() => dispatch(increment())}>
+            Increment
+        </button>
     );
 }
 
-export function ButtonComponentDecrement() {
+export const ButtonComponentDecrement = () => {
     const dispatch = useDispatch();
     return (
-         <div>
-            <button
-                aria-label="Decrement value"
-                onClick={() => dispatch(decrement())}>
-                  Decrement
-                </button>
-        </div>
+        <button
+            className="button button-decrement"
+            aria-label="Decrement value"
+            onClick={() => dispatch(decrement())}>
+            Decrement
+        </button>
     );
 }
 
-export function ButtonComponentOk() {
+export const ButtonComponentOk = () => {
     const dispatch = useDispatch();
     const inputValue = useSelector((state) => state.counter.inputValue);
     const handleAdd = () => {
@@ -40,8 +38,9 @@ export function ButtonComponentOk() {
     };
     return (
         <button
-          onClick={handleAdd}
-          >ok</button>
+            className="button button-ok"
+            onClick={handleAdd}>
+            OK
+        </button>
     );
 }
-

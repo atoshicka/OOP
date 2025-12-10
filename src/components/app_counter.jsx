@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-export function CounterComponent() {
+export const CounterComponent = () => {
     const count = useSelector((state) => state.counter.value);
     return (
-     <span>{count}</span>
+        <span className="counter-value">{count}</span>
     );
 }

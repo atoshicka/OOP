@@ -6,7 +6,6 @@ import { ButtonComponentOk } from './components/app_button';
 import { CounterComponent } from './components/app_counter';
 import { PeopleList } from './components/app_array';
 import './index.scss';
-import { StringDisplay } from './practic';
 
 export const App = () => {
   return (
